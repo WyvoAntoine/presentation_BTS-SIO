@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    
+    {% if listeInscriptionByName is empty %}
+        <p> Aucun inscrit pour ce nom </p>
+    {% else %}
+        
+        <p>{{ listeInscriptionByName.nom }}, {{ listeInscriptionByName.prenom }}, {{ listeInscriptionByName.adresse }}, {{ listeInscriptionByName.cp }}, {{ listeInscriptionByName.ville }}, {{ listeInscriptionByName.leBac.nombac}}</p>
+        
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "basePresentation.html.twig" %}
+
+{% block body %}
+    <nav class="navbar navbar-expand-md navbar-dark p-md-3">
+          <a class="px-5" href="{{path('accueil')}}"><b class="text-light" style="font-size:40px">BTS SIO</b></a>
+          <div class="btn-group">
+              <button type="button" class="btn btn-primary" style="background-color: black; border-color: black;"><a href="{{ path('accueil') }}">Accueil</a></button>
+              <button type="button" class="btn btn-primary" style="background-color: black; border-color: black;"><a href="{{ path('presentation') }}">Présentation</a></button>
+              <button type="button" class="btn btn-primary" style="background-color: black; border-color: black;"><a href="{{ path('specialite') }}">Spécialités</a></button>
+              
+            <div class="btn-group" style="background-color: black; border-color: black;">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background-color: black; border-color: black; color: #0d6efd;">
+                    Inscriptions
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ path('ajoutInscription')}}">Ajout Inscriptions</a>
+                    <a class="dropdown-item" href="{{ path('listeInscription')}}">Liste Inscriptions</a>
+                    <a class="dropdown-item" href="{{ path('rechercheInscriptionById')}}">Recherche Inscription par Id</a>
+                    <a class="dropdown-item" href="{{ path('rechercheInscriptionByName')}}">Recherche Inscription par Nom</a>
+                </div>
+            </div>
+          </div>          
+        </nav>
+                
+    {% if listeInscription is empty %}
+        <center><h1 class="title text-light" style="font-size:50px; border">Aucune inscription</h1></center>
+    {% else %}
+    <center><h1 class="title text-light" style="font-size:50px; border">Liste des inscrits</h1></center>
+    <br/>        
+    <div class="p-5 border" style="background-color:#374e6e ">
+        <table class="table" style="color:white;">
+            <thead>
+            <th>Nom</th>
+            <th>Prénom</th> 
+            <th>Adresse</th>
+            <th>CP</th>
+            <th>Ville</th>
+            <th>Bac</th>
+        </thead>
+        <tbody>
+        {% for uneInscription in listeInscription %}
+            <tr>
+                <td>{{ uneInscription.nom }}</td>
+                <td>{{ uneInscription.prenom }}</td>
+                <td>{{ uneInscription.adresse }}</td>
+                <td>{{ uneInscription.cp }}</td>
+                <td>{{ uneInscription.ville }}</td>
+                <td>{{ uneInscription.leBac.nombac}}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        {% endif %}
+        </tbody>
+    </table>    
+{% endblock %}

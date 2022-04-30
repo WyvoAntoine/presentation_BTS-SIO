@@ -1,0 +1,41 @@
+{% extends 'basePresentation.html.twig' %}
+{% block body %}
+    <nav class="navbar navbar-expand-md navbar-dark p-md-3">
+          <a class="px-5" href="{{path('accueil')}}"><b class="text-light" style="font-size:40px">BTS SIO</b></a>
+          <div class="btn-group">
+              <button type="button" class="btn btn-primary" style="background-color: black; border-color: black;"><a href="{{ path('accueil') }}">Accueil</a></button>
+              <button type="button" class="btn btn-primary" style="background-color: black; border-color: black;"><a href="{{ path('presentation') }}">Présentation</a></button>
+              <button type="button" class="btn btn-primary" style="background-color: black; border-color: black;"><a href="{{ path('specialite') }}">Spécialités</a></button>
+              
+            <div class="btn-group" style="background-color: black; border-color: black;">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background-color: black; border-color: black; color: #0d6efd;">
+                    Inscriptions
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ path('ajoutInscription')}}">Ajout Inscriptions</a>
+                    <a class="dropdown-item" href="{{ path('listeInscription')}}">Liste Inscriptions</a>
+                    <a class="dropdown-item" href="{{ path('rechercheInscriptionById')}}">Recherche Inscription par Id</a>
+                    <a class="dropdown-item" href="{{ path('rechercheInscriptionByName')}}">Recherche Inscription par Nom</a>
+                </div>
+            </div>
+          </div>          
+        </nav>
+                
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+ <div class="block">
+     <center><h1 class="title text-light" style="font-size:50px"><b>Bienvenue !</b></h1></center>
+            <div class="container my-5 d-grind gap-5">
+          <div class="p-5 border" style="background-color:#374e6e">
+
+              <p class="text-light" style="font-size:30px; text-align: justify">
+                  <b>Bienvenue sur le site qui vous présente le BTS SIO. Vous pourrez retrouver dans différentes rebriques toutes les informations concernant ce BTS !</b>
+
+              </p>
+          </div>
+      </div>
+      </div>
+            </div>
+{% endblock %}

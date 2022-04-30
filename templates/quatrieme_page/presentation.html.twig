@@ -1,0 +1,74 @@
+{% extends 'basePresentation.html.twig' %}
+{% block body %}
+    <nav class="navbar navbar-expand-md navbar-dark p-md-3">
+          <a class="px-5" href="{{path('accueil')}}"><b class="text-light" style="font-size:40px">BTS SIO</b></a>
+          <div class="btn-group">
+              <button type="button" class="btn btn-primary" style="background-color: black; border-color: black;"><a href="{{ path('accueil') }}">Accueil</a></button>
+              <button type="button" class="btn btn-primary" style="background-color: black; border-color: black;"><a href="{{ path('presentation') }}">Présentation</a></button>
+              <button type="button" class="btn btn-primary" style="background-color: black; border-color: black;"><a href="{{ path('specialite') }}">Spécialités</a></button>
+              
+            <div class="btn-group" style="background-color: black; border-color: black;">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background-color: black; border-color: black; color: #0d6efd;">
+                    Inscriptions
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ path('ajoutInscription')}}">Ajout Inscriptions</a>
+                    <a class="dropdown-item" href="{{ path('listeInscription')}}">Liste Inscriptions</a>
+                    <a class="dropdown-item" href="{{ path('rechercheInscriptionById')}}">Recherche Inscription par Id</a>
+                    <a class="dropdown-item" href="{{ path('rechercheInscriptionByName')}}">Recherche Inscription par Nom</a>
+                </div>
+            </div>
+          </div>          
+        </nav>
+                
+    <div class='container-fluid'>
+        <div class='row'>
+            <div class='col-2'></div>
+            <div class='col-8'>
+                <div class="block">
+                    
+     <center><h1 class="title text-light" style="font-size:50px; border"><b>Le BTS SIO</b></h1></center>
+            <div class="container my-5 d-grind gap-5">
+          <div class="p-5 border" style="background-color:#374e6e">
+
+              <p class="text-light" style="font-size:30px;text-align:justify">
+                  Le Brevet de Technicien Supérieur Services informatique aux 
+                  Organisations (SIO) s’adresse à ceux qui souhaitent se former 
+                  en deux ans aux métiers d’administrateur réseau ou de développeur 
+                  pour intégrer directement le marché du travail ou continuer des 
+                  études dans le domaine de l’informatique.<br/><br/></p></div></div>
+                 
+                  <div class="container my-5 d-grind gap-5">
+                <div class="p-5 border" style="background-color:#374e6e">
+                    <p class="text-light" style="font-size:30px;text-align:justify"><u><b>Qu'est ce que le BTS SIO ?</b></u><br/><br/>
+                      Le BTS Services informatique aux Organisations est un diplôme 
+                      reconnu par l’état de niveau Bac+2. Il remplace depuis septembre 
+                      2011 l’ancien BTS informatique de Gestion (BTS IG). En effet, 
+                      cette nouvelle formule répond aux attentes de la profession 
+                      en matière de qualification. Le programme a évolué en fonction 
+                      de la place et du rôle des TIC (Technologies d’Information 
+                      Communication) et propose deux spécialités bien distinctes : 
+                      le BTS SIO SISR et le BTS SIO SLAM.<br/><br/>
+
+                        Il associe aux enseignements théoriques et professionnels 
+                        (en contrôle continu et final) deux stages en entreprise 
+                        (10 à 11 semaines réparties sur les deux années d’études).<br/><br/> 
+
+                        En plus des matières en lien avec l’ingénierie informatique, 
+                        la formation propose également des enseignements de culture 
+                        générale, d’anglais (avec la possibilité de continuer une LV2), 
+                        de mathématiques appliquées à l’informatique, ainsi que sur les 
+                        outils d’analyse économique, managériale et juridique des services 
+                        informatiques.<br/><br/>
+
+                        De plus, au cours de cette formation, il est possible de 
+                        bénéficier d’un enseignement approfondi en mathématiques et 
+                        de travailler en autonomie en laboratoire informatique.
+
+              </p>
+                </div>
+          </div>
+      </div>
+      </div>
+           
+{% endblock %}

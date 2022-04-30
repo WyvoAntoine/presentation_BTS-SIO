@@ -1,0 +1,87 @@
+{% extends 'basePresentation.html.twig' %}
+{% block body %}
+    <nav class="navbar navbar-expand-md navbar-dark p-md-3">
+          <a class="px-5" href="{{path('accueil')}}"><b class="text-light" style="font-size:40px">BTS SIO</b></a>
+          <div class="btn-group">
+              <button type="button" class="btn btn-primary" style="background-color: black; border-color: black;"><a href="{{ path('accueil') }}">Accueil</a></button>
+              <button type="button" class="btn btn-primary" style="background-color: black; border-color: black;"><a href="{{ path('presentation') }}">Présentation</a></button>
+              <button type="button" class="btn btn-primary" style="background-color: black; border-color: black;"><a href="{{ path('specialite') }}">Spécialités</a></button>
+              
+            <div class="btn-group" style="background-color: black; border-color: black;">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background-color: black; border-color: black; color: #0d6efd;">
+                    Inscriptions
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ path('ajoutInscription')}}">Ajout Inscriptions</a>
+                    <a class="dropdown-item" href="{{ path('listeInscription')}}">Liste Inscriptions</a>
+                    <a class="dropdown-item" href="{{ path('rechercheInscriptionById')}}">Recherche Inscription par Id</a>
+                    <a class="dropdown-item" href="{{ path('rechercheInscriptionByName')}}">Recherche Inscription par Nom</a>
+                </div>
+            </div>
+          </div>          
+        </nav>
+                
+    <div class='container-fluid'>
+        <div class='row'>
+            <div class='col-2'></div>
+            <div class='col-8'>
+     <div class="block" >
+     <center><h1 class="title text-light" style="font-size:50px"><b>Les spécialités</b></h1></center>
+            <div class="container my-5 d-grind gap-5">
+          <div class="p-5 border" style="background-color:#374e6e ">
+
+              <p class="text-light" style="font-size:30px">
+                  Le BTS SIO est répartis en deux spécialitées majeurs :<br/><br/></p>
+                 
+                 
+                    <p class="text-light" style="font-size:30px;text-align:justify"><u><b>Le BTS SIO option SISR :</b></u><br/><br/>
+                      L’option Solutions d’infrastructure, systèmes et réseaux forme 
+                      des professionnels des réseaux et équipements informatiques 
+                      (installation, maintenance, sécurité). En sortant d’un BTS SIO SISR, 
+                      vous serez capables de gérer et d’administrer le réseau d’une société 
+                      et d’assurer sa sécurité et sa maintenance.<br/><br/>
+
+                      Les techniciens supérieurs en informatique option SISR,
+                        peuvent accéder aux métiers de :</p><br/>
+                    <ul class="text-light" style="font-size:30px;text-align:justify">
+                        <li>Administrateur systèmes et réseaux</li>
+                        <li>Informaticien support et déploiement</li>
+                        <li>Pilote d’exploitation</li>
+                        <li>Support systèmes et réseaux</li>
+                        <li>Technicien d’infrastructure</li>
+                        <li>Technicien de production</li>
+                        <li>Technicien micro et réseaux</li>
+                    </ul>
+
+                        
+              </p>
+              <br/><br/><br/>
+              <p class="text-light" style="font-size:30px;text-align:justify"><u><b>Le BTS SIO option SLAM :</b></u><br/><br/>
+                      L’option Solutions logicielles et applications métiers forme 
+                      des spécialistes des logiciels (rédaction d’un cahier des 
+                      charges, formulation des besoins et spécifications, développement, 
+                      intégration au sein de la société).<br/><br/>
+
+                     Les techniciens supérieurs en informatique option slam, 
+                     sont préparés aux métiers de</p><br/>
+                    <ul class="text-light" style="font-size:30px;text-align:justify">
+                        <li>Développeur d’applications informatiques</li>
+                        <li>Développeur informatique</li>
+                        <li>Analyste d’applications ou d’études</li>
+                        <li>Analyste programmeur</li>
+                        <li>Chargé d’études informatiques</li>
+                        <li>Informaticien d’études</li>
+                        <li>Programmeur analyste</li>
+                        <li>Programmeur d’applications</li>
+                        <li>Responsable des services applicatifs</li>
+                        <li>Technicien d’études informatiques</li>
+                    </ul>
+
+                        
+              </p>
+                </div>
+          </div>
+      </div>
+      </div>
+           
+{% endblock %}
